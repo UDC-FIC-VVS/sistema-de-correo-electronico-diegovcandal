@@ -31,7 +31,7 @@ public class ArchivadorSimpleTest {
 	}
 
 	/**
-	 * Test del metodo almacenarCorreo method, de la clase ArchivadorSimple.
+	 * Test del metodo almacenarCorreo, de la clase ArchivadorSimple.
 	 * 
 	 * Añade un mail correctamente a un ArchivadorSimple vacio
 	 */
@@ -45,7 +45,7 @@ public class ArchivadorSimpleTest {
 	}
 
 	/**
-	 * Test del metodo almacenarCorreo method, de la clase ArchivadorSimple.
+	 * Test del metodo almacenarCorreo, de la clase ArchivadorSimple.
 	 * 
 	 * Añade un mail a un ArchivadorSimple sin el suficiente espacio
 	 */
@@ -59,7 +59,7 @@ public class ArchivadorSimpleTest {
 	}
 
 	/**
-	 * Test del metodo obtenerEspacioTotal method, de la clase ArchivadorSimple.
+	 * Test del metodo obtenerEspacioTotal, de la clase ArchivadorSimple.
 	 * 
 	 * Obtiene el espacio total del ArchivadorSimple
 	 */
@@ -72,7 +72,7 @@ public class ArchivadorSimpleTest {
 	}
 
 	/**
-	 * Test del metodo obtenerEspacioTotal method, de la clase ArchivadorSimple.
+	 * Test del metodo obtenerEspacioTotal, de la clase ArchivadorSimple.
 	 * 
 	 * Obtiene el espacio total del ArchivadorSimple despues de añadir un correo
 	 */
@@ -88,8 +88,7 @@ public class ArchivadorSimpleTest {
 	}
 
 	/**
-	 * Test del metodo obtenerEspacioDisponible method, de la clase
-	 * ArchivadorSimple.
+	 * Test del metodo obtenerEspacioDisponible, de la clase ArchivadorSimple.
 	 * 
 	 * Obtiene el espacio disponible del ArchivadorSimple
 	 */
@@ -102,8 +101,7 @@ public class ArchivadorSimpleTest {
 	}
 
 	/**
-	 * Test del metodo obtenerEspacioDisponible method, de la clase
-	 * ArchivadorSimple.
+	 * Test del metodo obtenerEspacioDisponible, de la clase ArchivadorSimple.
 	 * 
 	 * Obtiene el espacio disponible del ArchivadorSimple despues de añadir un
 	 * correo correctamente
@@ -120,8 +118,7 @@ public class ArchivadorSimpleTest {
 	}
 
 	/**
-	 * Test del metodo obtenerEspacioDisponible method, de la clase
-	 * ArchivadorSimple.
+	 * Test del metodo obtenerEspacioDisponible, de la clase ArchivadorSimple.
 	 * 
 	 * Obtiene el espacio disponible del ArchivadorSimple despues de añadir un
 	 * correo sin tener el espacio necesario
@@ -138,7 +135,7 @@ public class ArchivadorSimpleTest {
 	}
 
 	/**
-	 * Test del metodo obtenerDelegado method, de la clase ArchivadorSimple.
+	 * Test del metodo obtenerDelegado, de la clase ArchivadorSimple.
 	 * 
 	 * Obtiene el Archivador delegado asignado al ArchivadorSimple, que sera un null
 	 * para esta implementacion de Archivador
