@@ -41,6 +41,24 @@ public class AdjuntoTest {
 	}
 
 	/**
+	 * Test del método obtenerTamaño, de la clase Adjunto.
+	 * 
+	 * Para mas de un adjunto, obtiene la suma del tamaño del mensaje y los archivos
+	 * adjuntados
+	 */
+	@Test()
+	public void obtenerTamañoAdjuntoMultipleTest() {
+
+		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
+		Archivo ar = new Imagen(NOMBRE_ADJUNTO, CONTENIDO_ADJUNTO);
+
+		Adjunto r = new Adjunto(m, ar);
+		Adjunto r2 = new Adjunto(r, ar);
+
+		assertEquals(r.obtenerTamaño() + ar.obtenerTamaño(), r2.obtenerTamaño());
+	}
+
+	/**
 	 * Test del método obtenerVisualizacion, de la clase Adjunto.
 	 * 
 	 * Obtiene la visualizacion del mensaje y el archivo adjunto
@@ -55,6 +73,25 @@ public class AdjuntoTest {
 
 		assertEquals(m.obtenerVisualizacion() + "\n\nAdxunto: " + ar.obtenerPreVisualizacion(),
 				r.obtenerVisualizacion());
+	}
+
+	/**
+	 * Test del método obtenerTamaño, de la clase Adjunto.
+	 * 
+	 * Para mas de un adjunto, obtiene la visualizacion del mensaje y los archivos
+	 * adjuntados
+	 */
+	@Test()
+	public void obtenerVisualizacionAdjuntoMultipleTest() {
+
+		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
+		Archivo ar = new Imagen(NOMBRE_ADJUNTO, CONTENIDO_ADJUNTO);
+
+		Adjunto r = new Adjunto(m, ar);
+		Adjunto r2 = new Adjunto(r, ar);
+
+		assertEquals(r.obtenerVisualizacion() + "\n\nAdxunto: " + ar.obtenerPreVisualizacion(),
+				r2.obtenerVisualizacion());
 	}
 
 	/**
