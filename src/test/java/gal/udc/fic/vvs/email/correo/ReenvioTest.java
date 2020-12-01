@@ -39,6 +39,24 @@ public class ReenvioTest {
 	}
 
 	/**
+	 * Test del método obtenerTamaño, de la clase Reenvio.
+	 * 
+	 * Para mas de un reenvio, obtiene la suma del tamaño del mensaje y los correos
+	 * reenviados
+	 */
+	@Test()
+	public void obtenerTamañoReenvioMultipleTest() {
+
+		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
+		Mensaje m_reenviado = new Mensaje(new Texto(NOMBRE_MENSAJE_REENVIADO, CONTENIDO_MENSAJE_REENVIADO));
+
+		Correo r = new Reenvio(m, m_reenviado);
+		Correo r2 = new Reenvio(m, r);
+
+		assertEquals(m.obtenerTamaño() + r.obtenerTamaño(), r2.obtenerTamaño());
+	}
+
+	/**
 	 * Test del método obtenerVisualizacion, de la clase Reenvio.
 	 * 
 	 * Obtiene la visualizacion del mensaje y el correo reenviado
@@ -53,6 +71,25 @@ public class ReenvioTest {
 
 		assertEquals(m.obtenerVisualizacion() + "\n\n---- Correo reenviado ----\n\n"
 				+ m_reenviado.obtenerVisualizacion() + "\n---- Fin correo reenviado ----", r.obtenerVisualizacion());
+	}
+
+	/**
+	 * Test del método obtenerTamaño, de la clase Reenvio.
+	 * 
+	 * Para mas de un reenvio, obtiene la visualizacion del mensaje y los correos
+	 * reenviados
+	 */
+	@Test()
+	public void obtenerVisualizacionReenvioMultipleTest() {
+
+		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
+		Mensaje m_reenviado = new Mensaje(new Texto(NOMBRE_MENSAJE_REENVIADO, CONTENIDO_MENSAJE_REENVIADO));
+
+		Correo r = new Reenvio(m, m_reenviado);
+		Correo r2 = new Reenvio(m, r);
+
+		assertEquals(m.obtenerVisualizacion() + "\n\n---- Correo reenviado ----\n\n" + r.obtenerVisualizacion()
+				+ "\n---- Fin correo reenviado ----", r2.obtenerVisualizacion());
 	}
 
 	/**
