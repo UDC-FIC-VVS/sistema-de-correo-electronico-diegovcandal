@@ -63,10 +63,7 @@ public class ReenvioTest {
 	@Test()
 	public void obtenerNoLeidosTest() {
 
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Mensaje m_reenviado = new Mensaje(new Texto(NOMBRE_MENSAJE_REENVIADO, CONTENIDO_MENSAJE_REENVIADO));
-
-		Correo r = new Reenvio(m, m_reenviado);
+		Reenvio r = crearReenvio();
 
 		assertEquals(1, r.obtenerNoLeidos());
 	}
@@ -117,10 +114,7 @@ public class ReenvioTest {
 	@Test()
 	public void obtenerIconoLeidoTest() {
 
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Mensaje m_reenviado = new Mensaje(new Texto(NOMBRE_MENSAJE_REENVIADO, CONTENIDO_MENSAJE_REENVIADO));
-
-		Correo r = new Reenvio(m, m_reenviado);
+		Reenvio r = crearReenvio();
 
 		r.establecerLeido(true);
 
@@ -135,10 +129,7 @@ public class ReenvioTest {
 	@Test()
 	public void obtenerIconoNoLeidoTest() {
 
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Mensaje m_reenviado = new Mensaje(new Texto(NOMBRE_MENSAJE_REENVIADO, CONTENIDO_MENSAJE_REENVIADO));
-
-		Correo r = new Reenvio(m, m_reenviado);
+		Reenvio r = crearReenvio();
 
 		assertEquals(ICONO_NUEVO_MENSAJE, r.obtenerIcono());
 	}
@@ -202,10 +193,7 @@ public class ReenvioTest {
 	@Test(expected = OperacionInvalida.class)
 	public void explorarTest() throws OperacionInvalida {
 
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Mensaje m_reenviado = new Mensaje(new Texto(NOMBRE_MENSAJE_REENVIADO, CONTENIDO_MENSAJE_REENVIADO));
-
-		Correo r = new Reenvio(m, m_reenviado);
+		Reenvio r = crearReenvio();
 
 		r.explorar();
 	}
@@ -218,10 +206,7 @@ public class ReenvioTest {
 	@Test(expected = OperacionInvalida.class)
 	public void añadirTest() throws OperacionInvalida {
 
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Mensaje m_reenviado = new Mensaje(new Texto(NOMBRE_MENSAJE_REENVIADO, CONTENIDO_MENSAJE_REENVIADO));
-
-		Correo r = new Reenvio(m, m_reenviado);
+		Reenvio r = crearReenvio();
 
 		r.añadir(new Mensaje(new Texto(CONTENIDO_MENSAJE, CONTENIDO_MENSAJE)));
 	}
@@ -234,10 +219,7 @@ public class ReenvioTest {
 	@Test(expected = OperacionInvalida.class)
 	public void eliminarTest() throws OperacionInvalida {
 
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Mensaje m_reenviado = new Mensaje(new Texto(NOMBRE_MENSAJE_REENVIADO, CONTENIDO_MENSAJE_REENVIADO));
-
-		Correo r = new Reenvio(m, m_reenviado);
+		Reenvio r = crearReenvio();
 
 		r.eliminar(new Mensaje(new Texto(CONTENIDO_MENSAJE, CONTENIDO_MENSAJE)));
 	}
@@ -250,10 +232,7 @@ public class ReenvioTest {
 	@Test(expected = OperacionInvalida.class)
 	public void obtenerHijoTest() throws OperacionInvalida {
 
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Mensaje m_reenviado = new Mensaje(new Texto(NOMBRE_MENSAJE_REENVIADO, CONTENIDO_MENSAJE_REENVIADO));
-
-		Correo r = new Reenvio(m, m_reenviado);
+		Reenvio r = crearReenvio();
 
 		r.obtenerHijo(0);
 	}
@@ -266,10 +245,7 @@ public class ReenvioTest {
 	@Test()
 	public void buscarTest() {
 
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Mensaje m_reenviado = new Mensaje(new Texto(NOMBRE_MENSAJE_REENVIADO, CONTENIDO_MENSAJE_REENVIADO));
-
-		Reenvio r = new Reenvio(m, m_reenviado);
+		Reenvio r = crearReenvio();
 
 		Collection<Reenvio> collection = new Vector<Reenvio>();
 		collection.add(r);
@@ -285,10 +261,7 @@ public class ReenvioTest {
 	@Test()
 	public void buscarCadenaVaciaTest() {
 
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Mensaje m_reenviado = new Mensaje(new Texto(NOMBRE_MENSAJE_REENVIADO, CONTENIDO_MENSAJE_REENVIADO));
-
-		Reenvio r = new Reenvio(m, m_reenviado);
+		Reenvio r = crearReenvio();
 
 		Collection<Reenvio> collection = new Vector<Reenvio>();
 		collection.add(r);
@@ -305,10 +278,7 @@ public class ReenvioTest {
 	@Test()
 	public void buscarCadenaDistintaTest() {
 
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Mensaje m_reenviado = new Mensaje(new Texto(NOMBRE_MENSAJE_REENVIADO, CONTENIDO_MENSAJE_REENVIADO));
-
-		Reenvio r = new Reenvio(m, m_reenviado);
+		Reenvio r = crearReenvio();
 
 		assertEquals(new Vector<Reenvio>(), r.buscar(BUSCAR_MENSAJE_DISTINTO));
 	}
@@ -321,11 +291,7 @@ public class ReenvioTest {
 	@Test()
 	public void establecerObtenerPadreTest() throws OperacionInvalida {
 
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Mensaje m_reenviado = new Mensaje(new Texto(NOMBRE_MENSAJE_REENVIADO, CONTENIDO_MENSAJE_REENVIADO));
-
-		Reenvio r = new Reenvio(m, m_reenviado);
-
+		Reenvio r = crearReenvio();
 		Carpeta c = new Carpeta(NOMBRE_CARPETA);
 		r.establecerPadre(c);
 
@@ -340,12 +306,16 @@ public class ReenvioTest {
 	@Test()
 	public void obtenerPadreNullTest() throws OperacionInvalida {
 
+		Reenvio r = crearReenvio();
+
+		assertEquals(null, r.obtenerPadre());
+	}
+
+	private Reenvio crearReenvio() {
 		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
 		Mensaje m_reenviado = new Mensaje(new Texto(NOMBRE_MENSAJE_REENVIADO, CONTENIDO_MENSAJE_REENVIADO));
 
-		Reenvio r = new Reenvio(m, m_reenviado);
-
-		assertEquals(null, r.obtenerPadre());
+		return new Reenvio(m, m_reenviado);
 	}
 
 }
