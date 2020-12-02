@@ -291,7 +291,7 @@ public class CarpetaLimitadaTest {
 	}
 
 	/**
-	 * Test del método añadir, de la clase Carpeta.
+	 * Test del método añadir, de la clase CarpetaLimitada.
 	 * 
 	 * Añade un hijo a la carpeta
 	 */
@@ -306,7 +306,7 @@ public class CarpetaLimitadaTest {
 	}
 
 	/**
-	 * Test del método añadir, de la clase Carpeta.
+	 * Test del método añadir, de la clase CarpetaLimitada.
 	 * 
 	 * Añade un hijo de una carpeta a otra
 	 */
@@ -325,7 +325,7 @@ public class CarpetaLimitadaTest {
 	}
 
 	/**
-	 * Test del método añadir, de la clase Carpeta.
+	 * Test del método añadir, de la clase CarpetaLimitada.
 	 * 
 	 * Añade una carpeta como hija de otra
 	 */
@@ -342,7 +342,7 @@ public class CarpetaLimitadaTest {
 	}
 
 	/**
-	 * Test del método eliminar, de la clase Carpeta.
+	 * Test del método eliminar, de la clase CarpetaLimitada.
 	 * 
 	 * Elimina un hijo de la carpeta
 	 */
@@ -359,7 +359,7 @@ public class CarpetaLimitadaTest {
 	}
 
 	/**
-	 * Test del método eliminar, de la clase Carpeta.
+	 * Test del método eliminar, de la clase CarpetaLimitada.
 	 * 
 	 * Elimina una carpeta hija de otra
 	 */
@@ -377,7 +377,7 @@ public class CarpetaLimitadaTest {
 	}
 
 	/**
-	 * Test del método eliminar, de la clase Carpeta.
+	 * Test del método eliminar, de la clase CarpetaLimitada.
 	 * 
 	 * Elimina un hijo que no existe de la carpeta
 	 */
@@ -395,7 +395,7 @@ public class CarpetaLimitadaTest {
 	}
 
 	/**
-	 * Test del método obtenerHijo, de la clase Carpeta.
+	 * Test del método obtenerHijo, de la clase CarpetaLimitada.
 	 * 
 	 * Obtiene el hijo en cierta posicion
 	 */
@@ -410,7 +410,7 @@ public class CarpetaLimitadaTest {
 	}
 
 	/**
-	 * Test del método obtenerHijo, de la clase Carpeta.
+	 * Test del método obtenerHijo, de la clase CarpetaLimitada.
 	 * 
 	 * Obtiene el hijo inexistente en cierta posicion
 	 */
@@ -423,7 +423,7 @@ public class CarpetaLimitadaTest {
 	}
 
 	/**
-	 * Test del método buscar, de la clase Carpeta.
+	 * Test del método buscar, de la clase CarpetaLimitada.
 	 * 
 	 * Devuelve los hijos que hacen match con la cadena de busqueda
 	 */
@@ -436,7 +436,7 @@ public class CarpetaLimitadaTest {
 	}
 
 	/**
-	 * Test del método buscar, de la clase Carpeta.
+	 * Test del método buscar, de la clase CarpetaLimitada.
 	 * 
 	 * Devuelve los hijos que hacen match con la cadena de busqueda sobrepasando el
 	 * limite de elementos encontrados
@@ -454,7 +454,7 @@ public class CarpetaLimitadaTest {
 	}
 
 	/**
-	 * Test del método buscar, de la clase Carpeta.
+	 * Test del método buscar, de la clase CarpetaLimitada.
 	 * 
 	 * Devuelve los hijos que hacen match con la cadena de busqueda para una carpeta
 	 * vacia
@@ -468,7 +468,7 @@ public class CarpetaLimitadaTest {
 	}
 
 	/**
-	 * Test del método buscar, de la clase Carpeta.
+	 * Test del método buscar, de la clase CarpetaLimitada.
 	 * 
 	 * Devuelve los hijos que hacen match con la cadena de busqueda
 	 */
@@ -481,7 +481,7 @@ public class CarpetaLimitadaTest {
 	}
 
 	/**
-	 * Test del método buscar, de la clase Carpeta.
+	 * Test del método buscar, de la clase CarpetaLimitada.
 	 * 
 	 * Devuelve los hijos que hacen match con la cadena de busqueda con un hijo que
 	 * es otra carpeta
