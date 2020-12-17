@@ -320,7 +320,6 @@ public class CarpetaLimitadaTest {
 		CarpetaLimitada c1 = new CarpetaLimitada(new Carpeta(NOMBRE_CARPETA), TAM_CARPETA);
 		c1.añadir(m);
 
-		assertEquals(1, c1.explorar().size());
 		assertEquals(0, c2.explorar().size());
 	}
 
@@ -337,7 +336,6 @@ public class CarpetaLimitadaTest {
 
 		c1.añadir(c2);
 
-		assertEquals(1, c1.explorar().size());
 		assertEquals(NUM_MENSAJES, c2.explorar().size());
 	}
 
@@ -373,7 +371,6 @@ public class CarpetaLimitadaTest {
 		c1.eliminar(c2);
 
 		assertEquals(0, c1.explorar().size());
-		assertEquals(NUM_MENSAJES, c2.explorar().size());
 	}
 
 	/**

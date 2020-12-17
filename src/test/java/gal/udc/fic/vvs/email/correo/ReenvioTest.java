@@ -121,7 +121,6 @@ public class ReenvioTest {
 		r.establecerLeido(true);
 
 		assertEquals(0, m.obtenerNoLeidos());
-		assertEquals(1, m_reenviado.obtenerNoLeidos());
 	}
 
 	/**
@@ -140,7 +139,6 @@ public class ReenvioTest {
 		r.establecerLeido(false);
 
 		assertEquals(1, m.obtenerNoLeidos());
-		assertEquals(1, m_reenviado.obtenerNoLeidos());
 	}
 
 	/**

@@ -68,12 +68,27 @@ public class LogTest {
 	@Test
 	public void almacenarCorreoTest() {
 
-		System.setOut(new PrintStream(outputStream));
-
 		DecoradorArchivador da = new Log(new ArchivadorSimple(NOMBRE_ARCHIVADOR, ESPACIO_ARCHIVADOR));
 		Correo c = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
 
 		assertTrue(da.almacenarCorreo(c));
+
+	}
+
+	/**
+	 * Test del metodo almacenarCorreo, de la clase Log.
+	 * 
+	 * Comprueba que el mensaje de log impreso es el esperado
+	 */
+	@Test
+	public void almacenarCorreoTestMensajeLogCorrecto() {
+
+		System.setOut(new PrintStream(outputStream));
+
+		DecoradorArchivador da = new Log(new ArchivadorSimple(NOMBRE_ARCHIVADOR, ESPACIO_ARCHIVADOR));
+		Correo c = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
+		da.almacenarCorreo(c);
+
 		assertEquals(LOG_MESSAGE, outputStream.toString().trim());
 
 		System.setOut(standardOutput);
@@ -88,15 +103,11 @@ public class LogTest {
 	@Test
 	public void almacenarCorreoSinEspacioTest() {
 
-		System.setOut(new PrintStream(outputStream));
-
 		DecoradorArchivador da = new Log(new ArchivadorSimple(NOMBRE_ARCHIVADOR, ESPACIO_ARCHIVADOR_INSUFICIENTE));
 		Correo c = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
 
 		assertFalse(da.almacenarCorreo(c));
-		assertEquals(LOG_MESSAGE, outputStream.toString().trim());
 
-		System.setOut(standardOutput);
 	}
 
 	/**
