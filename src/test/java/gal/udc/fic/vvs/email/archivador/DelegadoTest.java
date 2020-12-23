@@ -1,6 +1,5 @@
 package gal.udc.fic.vvs.email.archivador;
 
-import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -68,13 +67,13 @@ public class DelegadoTest {
 	 * </ul>
 	 * </ul>
 	 */
-	@Test
+	@Test(expected = NullPointerException.class)
 	public void almacenarCorreoSinEspacioTest() {
 
 		DecoradorArchivador da = new Delegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR, ESPACIO_ARCHIVADOR_INSUFICIENTE));
 		Correo c = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
 
-		assertThrows(NullPointerException.class, () -> da.almacenarCorreo(c));
+		da.almacenarCorreo(c);
 	}
 
 	/**

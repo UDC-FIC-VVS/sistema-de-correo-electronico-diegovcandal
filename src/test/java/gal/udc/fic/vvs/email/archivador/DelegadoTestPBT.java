@@ -3,7 +3,6 @@ package gal.udc.fic.vvs.email.archivador;
 import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.Matchers.lessThan;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assume.assumeThat;
 
@@ -89,12 +88,22 @@ public class DelegadoTestPBT {
 	@Property
 	public void almacenarCorreoSinEspacioTest(String randomContenido, int randomEspacio) {
 
+		boolean exception_thrown = false;
+
 		assumeThat(randomContenido.length(), greaterThan(randomEspacio));
 
 		DecoradorArchivador da = new Delegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR_DEFECTO, randomEspacio));
 		Correo c = new Mensaje(new Texto(NOMBRE_MENSAJE_DEFECTO, randomContenido));
 
-		assertThrows(NullPointerException.class, () -> da.almacenarCorreo(c));
+		try {
+			da.almacenarCorreo(c);
+
+		} catch (NullPointerException e) {
+			exception_thrown = true;
+		}
+
+		assertTrue(exception_thrown);
+		;
 	}
 
 	/**
