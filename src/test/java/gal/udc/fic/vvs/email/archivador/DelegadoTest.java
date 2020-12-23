@@ -1,6 +1,6 @@
 package gal.udc.fic.vvs.email.archivador;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -20,12 +20,27 @@ public class DelegadoTest {
 	private static final String CONTENIDO_MENSAJE = "Contenido de Mensaje Test";
 
 	/**
-	 * Test del metodo almacenarCorreo, de la clase Delegado.
+	 * Test unitario, del método almacenarCorreo, de la clase Delegado.
+	 * 
+	 * <p>
 	 * 
 	 * Añade un mail correctamente al Archivador decorado vacio asignado al Delegado
+	 * y con el espacio justo para aceptarlo
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores frontera, el tamaño del mensaje es el maximo para poder ser
+	 * almacenado
+	 * </ul>
+	 * </ul>
 	 */
 	@Test
-	public void almacenarCorreoTest() {
+	public void almacenarCorreoEspacioExactoTest() {
 
 		DecoradorArchivador da = new Delegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR, ESPACIO_ARCHIVADOR));
 		Correo c = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
@@ -34,226 +49,63 @@ public class DelegadoTest {
 	}
 
 	/**
-	 * Test del metodo almacenarCorreo, de la clase Delegado.
+	 * Test unitario, del método almacenarCorreo, de la clase Delegado.
+	 * 
+	 * <p>
 	 * 
 	 * Añade un mail al Archivador decorado sin el espacio suficiente asignado al
 	 * Delegado, sin un Archivador asignado como delegado
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores frontera, el tamaño del mensaje es el minimo para no poder
+	 * almacenarse
+	 * </ul>
+	 * </ul>
 	 */
-	@Test(expected = NullPointerException.class)
+	@Test
 	public void almacenarCorreoSinEspacioTest() {
 
 		DecoradorArchivador da = new Delegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR, ESPACIO_ARCHIVADOR_INSUFICIENTE));
 		Correo c = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
 
-		da.almacenarCorreo(c);
+		assertThrows(NullPointerException.class, () -> da.almacenarCorreo(c));
 	}
 
 	/**
-	 * Test del metodo almacenarCorreo, de la clase Delegado.
+	 * Test unitario, del método almacenarCorreo, de la clase Delegado.
+	 * 
+	 * <p>
 	 * 
 	 * Añade un mail al Archivador decorado sin el espacio suficiente asignado al
-	 * Delegado, con un delegado asignado
+	 * Delegado, con un delegado asignado con el espacio justo para aceptarlo
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores frontera, el tamaño del mensaje es el maximo para poder ser
+	 * almacenado en el Delegado
+	 * </ul>
+	 * </ul>
 	 */
-	@Test()
+	@Test
 	public void almacenarCorreoSinEspacioConDelegadoTest() {
 
 		DecoradorArchivador da = new Delegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR, ESPACIO_ARCHIVADOR_INSUFICIENTE));
-		da.establecerDelegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR_DELEGADO, ESPACIO_ARCHIVADOR));
+		da.establecerDelegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR_DELEGADO, CONTENIDO_MENSAJE.length() + 1));
 
 		Correo c = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
 
 		assertTrue(da.almacenarCorreo(c));
-	}
-
-	/**
-	 * Test del metodo obtenerDelegado, de la clase Delegado.
-	 * 
-	 * Obtiene el delegado asignado previamente
-	 */
-	@Test()
-	public void establecerObtenerDelegadoTest() {
-
-		DecoradorArchivador da = new Delegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR, ESPACIO_ARCHIVADOR_INSUFICIENTE));
-		ArchivadorSimple as = new ArchivadorSimple(NOMBRE_ARCHIVADOR_DELEGADO, ESPACIO_ARCHIVADOR);
-
-		da.establecerDelegado(as);
-
-		assertEquals(as, da.obtenerDelegado());
-	}
-
-	/**
-	 * Test del metodo obtenerNombre, de la clase Delegado.
-	 * 
-	 * Comprueba que el nombre obtenido es el esperado.
-	 */
-	@Test
-	public void obtenerNombreTest() {
-
-		DecoradorArchivador da = new Delegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR, ESPACIO_ARCHIVADOR));
-		assertEquals(NOMBRE_ARCHIVADOR, da.obtenerNombre());
-	}
-
-	/**
-	 * Test del metodo obtenerEspacioTotal method, de la clase Delegado.
-	 * 
-	 * Obtiene el espacio total del Archivador decorado asignado a Delegado
-	 */
-	@Test
-	public void obtenerEspacioTotalDecoradoTest() {
-
-		DecoradorArchivador da = new Delegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR, ESPACIO_ARCHIVADOR));
-
-		assertEquals(ESPACIO_ARCHIVADOR, da.obtenerEspacioTotal());
-	}
-
-	/**
-	 * Test del metodo obtenerEspacioTotal, de la clase Delegado.
-	 * 
-	 * Obtiene el espacio total del Archivador decorado asignado a Delegado
-	 */
-	@Test
-	public void obtenerEspacioTotalDecoradoDespuesDeAlmacenarTest() {
-
-		DecoradorArchivador da = new Delegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR, ESPACIO_ARCHIVADOR));
-		Correo c = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-
-		da.almacenarCorreo(c);
-
-		assertEquals(ESPACIO_ARCHIVADOR, da.obtenerEspacioTotal());
-	}
-
-	/**
-	 * Test del metodo obtenerEspacioTotal method, de la clase Delegado.
-	 * 
-	 * Obtiene el espacio total del Archivador delegado asignado a Delegado
-	 */
-	@Test
-	public void obtenerEspacioTotalDelegadoTest() {
-
-		DecoradorArchivador da = new Delegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR, ESPACIO_ARCHIVADOR));
-		da.establecerDelegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR_DELEGADO, ESPACIO_ARCHIVADOR_DELEGADO));
-
-		assertEquals(ESPACIO_ARCHIVADOR_DELEGADO, da.obtenerDelegado().obtenerEspacioTotal());
-	}
-
-	/**
-	 * Test del metodo obtenerEspacioTotal, de la clase Delegado.
-	 * 
-	 * Obtiene el espacio total del Archivador delegado asignado a Delegado
-	 */
-	@Test
-	public void obtenerEspacioTotalDelegadoDespuesDeAlmacenarTest() {
-
-		DecoradorArchivador da = new Delegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR, ESPACIO_ARCHIVADOR));
-		da.establecerDelegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR_DELEGADO, ESPACIO_ARCHIVADOR_DELEGADO));
-
-		Correo c = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-
-		da.almacenarCorreo(c);
-
-		assertEquals(ESPACIO_ARCHIVADOR_DELEGADO, da.obtenerDelegado().obtenerEspacioTotal());
-	}
-
-	/**
-	 * Test del metodo obtenerEspacioDisponible, de la clase Delegado.
-	 * 
-	 * Obtiene el espacio disponible del Archivador decorado asignado a Delegado
-	 */
-	@Test
-	public void obtenerEspacioDisponibleDecoradoTest() {
-
-		DecoradorArchivador da = new Delegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR, ESPACIO_ARCHIVADOR));
-
-		assertEquals(ESPACIO_ARCHIVADOR, da.obtenerEspacioDisponible());
-	}
-
-	/**
-	 * Test del metodo obtenerEspacioDisponible, de la clase Delegado.
-	 * 
-	 * Obtiene el espacio disponible del Archivador decorado asignado a Delegado
-	 * despues de añadir un correo correctamente
-	 */
-	@Test
-	public void obtenerEspacioDisponibleDecoradoDespuesDeAlmacenarTest() {
-
-		DecoradorArchivador da = new Delegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR, ESPACIO_ARCHIVADOR));
-		Correo c = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-
-		da.almacenarCorreo(c);
-
-		assertEquals(ESPACIO_ARCHIVADOR - c.obtenerTamaño(), da.obtenerEspacioDisponible());
-	}
-
-	/**
-	 * Test del metodo obtenerEspacioDisponible, de la clase Delegado.
-	 * 
-	 * Obtiene el espacio disponible del Archivador decorado asignado a Delegado
-	 * despues de añadir un correo sin tener el espacio necesario
-	 */
-	@Test
-	public void obtenerEspacioDisponibleDecoradoSinEspacioTest() {
-
-		DecoradorArchivador da = new Delegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR, ESPACIO_ARCHIVADOR_INSUFICIENTE));
-		da.establecerDelegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR_DELEGADO, ESPACIO_ARCHIVADOR));
-
-		Correo c = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-
-		da.almacenarCorreo(c);
-
-		assertEquals(ESPACIO_ARCHIVADOR_INSUFICIENTE, da.obtenerEspacioDisponible());
-	}
-
-	/**
-	 * Test del metodo obtenerEspacioDisponible, de la clase Delegado.
-	 * 
-	 * Obtiene el espacio disponible del Archivador delegado asignado a Delegado
-	 */
-	@Test
-	public void obtenerEspacioDisponibleDelegadoTest() {
-
-		DecoradorArchivador da = new Delegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR, ESPACIO_ARCHIVADOR));
-		da.establecerDelegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR_DELEGADO, ESPACIO_ARCHIVADOR_DELEGADO));
-
-		assertEquals(ESPACIO_ARCHIVADOR_DELEGADO, da.obtenerDelegado().obtenerEspacioDisponible());
-	}
-
-	/**
-	 * Test del metodo obtenerEspacioDisponible, de la clase Delegado.
-	 * 
-	 * Obtiene el espacio disponible del Archivador delegado asignado a Delegado
-	 * despues de añadir un correo correctamente al archivador decorado
-	 */
-	@Test
-	public void obtenerEspacioDisponibleDelegadoDespuesDeAlmacenarTest() {
-
-		DecoradorArchivador da = new Delegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR, ESPACIO_ARCHIVADOR));
-		da.establecerDelegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR_DELEGADO, ESPACIO_ARCHIVADOR_DELEGADO));
-
-		Correo c = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-
-		da.almacenarCorreo(c);
-
-		assertEquals(ESPACIO_ARCHIVADOR_DELEGADO, da.obtenerDelegado().obtenerEspacioDisponible());
-	}
-
-	/**
-	 * Test del metodo obtenerEspacioDisponible, de la clase Delegado.
-	 * 
-	 * Obtiene el espacio disponible del Archivador delegado asignado a Delegado
-	 * despues de añadir un correo al archivador decorado sin tener el espacio
-	 * necesario
-	 */
-	@Test
-	public void obtenerEspacioDisponibleDelegadoSinEspacioTest() {
-
-		DecoradorArchivador da = new Delegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR, ESPACIO_ARCHIVADOR_INSUFICIENTE));
-		da.establecerDelegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR_DELEGADO, ESPACIO_ARCHIVADOR_DELEGADO));
-
-		Correo c = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-
-		da.almacenarCorreo(c);
-
-		assertEquals(ESPACIO_ARCHIVADOR_DELEGADO - c.obtenerTamaño(), da.obtenerDelegado().obtenerEspacioDisponible());
 	}
 
 }
