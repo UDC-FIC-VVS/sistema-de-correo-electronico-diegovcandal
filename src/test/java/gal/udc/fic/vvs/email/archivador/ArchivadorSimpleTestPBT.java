@@ -69,7 +69,7 @@ public class ArchivadorSimpleTestPBT {
 	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
 	 * <li>Mecanismo de selección de datos:
 	 * <ul>
-	 * <li>Valores por defecto para casos donde estos influyan en la prueba.
+	 * <li>Valores por defecto para casos donde estos no influyan en la prueba.
 	 * <li>Categoria, strings de cualquier longitud no nulos, generados de forma
 	 * aleatoria.
 	 * <li>Categoria, numeros naturales, generados de forma aleatoria.
@@ -105,7 +105,7 @@ public class ArchivadorSimpleTestPBT {
 	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
 	 * <li>Mecanismo de selección de datos:
 	 * <ul>
-	 * <li>Valores por defecto para casos donde estos influyan en la prueba.
+	 * <li>Valores por defecto para casos donde estos no influyan en la prueba.
 	 * <li>Categoria, strings de cualquier longitud no nulos, generados de forma
 	 * aleatoria.
 	 * <li>Categoria, numeros naturales, generados de forma aleatoria.
@@ -141,7 +141,7 @@ public class ArchivadorSimpleTestPBT {
 	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
 	 * <li>Mecanismo de selección de datos:
 	 * <ul>
-	 * <li>Valores por defecto para casos donde estos influyan en la prueba.
+	 * <li>Valores por defecto para casos donde estos no influyan en la prueba.
 	 * <li>Categoria, strings de cualquier longitud no nulos, generados de forma
 	 * aleatoria.
 	 * <li>Categoria, numeros naturales, generados de forma aleatoria.
@@ -174,7 +174,7 @@ public class ArchivadorSimpleTestPBT {
 	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
 	 * <li>Mecanismo de selección de datos:
 	 * <ul>
-	 * <li>Valores por defecto para casos donde estos influyan en la prueba.
+	 * <li>Valores por defecto para casos donde estos no influyan en la prueba.
 	 * <li>Categoria, strings de cualquier longitud no nulos, generados de forma
 	 * aleatoria.
 	 * <li>Categoria, numeros naturales, generados de forma aleatoria.
@@ -212,7 +212,7 @@ public class ArchivadorSimpleTestPBT {
 	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
 	 * <li>Mecanismo de selección de datos:
 	 * <ul>
-	 * <li>Valores por defecto para casos donde estos influyan en la prueba.
+	 * <li>Valores por defecto para casos donde estos no influyan en la prueba.
 	 * <li>Categoria, numeros naturales, generados de forma aleatoria.
 	 * </ul>
 	 * </ul>
@@ -243,7 +243,7 @@ public class ArchivadorSimpleTestPBT {
 	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
 	 * <li>Mecanismo de selección de datos:
 	 * <ul>
-	 * <li>Valores por defecto para casos donde estos influyan en la prueba.
+	 * <li>Valores por defecto para casos donde estos no influyan en la prueba.
 	 * <li>Categoria, strings de cualquier longitud no nulos, generados de forma
 	 * aleatoria.
 	 * <li>Categoria, numeros naturales, generados de forma aleatoria.
@@ -282,7 +282,7 @@ public class ArchivadorSimpleTestPBT {
 	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
 	 * <li>Mecanismo de selección de datos:
 	 * <ul>
-	 * <li>Valores por defecto para casos donde estos influyan en la prueba.
+	 * <li>Valores por defecto para casos donde estos no influyan en la prueba.
 	 * <li>Categoria, strings de cualquier longitud no nulos, generados de forma
 	 * aleatoria.
 	 * <li>Categoria, numeros naturales, generados de forma aleatoria.

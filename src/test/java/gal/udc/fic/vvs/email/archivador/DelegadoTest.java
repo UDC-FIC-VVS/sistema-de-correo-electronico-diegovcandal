@@ -12,8 +12,6 @@ public class DelegadoTest {
 
 	private static final String NOMBRE_ARCHIVADOR = "Archivador Nombre Test";
 	private static final String NOMBRE_ARCHIVADOR_DELEGADO = "Archivador Delegado Nombre Test";
-	private static final int ESPACIO_ARCHIVADOR = 100;
-	private static final int ESPACIO_ARCHIVADOR_DELEGADO = 500;
 	private static final int ESPACIO_ARCHIVADOR_INSUFICIENTE = -1;
 	private static final String NOMBRE_MENSAJE = "Mensaje Nombre Test";
 	private static final String CONTENIDO_MENSAJE = "Contenido de Mensaje Test";
@@ -41,7 +39,7 @@ public class DelegadoTest {
 	@Test
 	public void almacenarCorreoEspacioExactoTest() {
 
-		DecoradorArchivador da = new Delegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR, ESPACIO_ARCHIVADOR));
+		DecoradorArchivador da = new Delegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR, CONTENIDO_MENSAJE.length() + 1));
 		Correo c = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
 
 		assertTrue(da.almacenarCorreo(c));
@@ -59,7 +57,7 @@ public class DelegadoTest {
 	 * 
 	 * <ul>
 	 * <li>Nivel de la prueba: Test Unitario.
-	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y negativo.
 	 * <li>Mecanismo de selección de datos:
 	 * <ul>
 	 * <li>Valores frontera, el tamaño del mensaje es el minimo para no poder
@@ -70,7 +68,7 @@ public class DelegadoTest {
 	@Test(expected = NullPointerException.class)
 	public void almacenarCorreoSinEspacioTest() {
 
-		DecoradorArchivador da = new Delegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR, ESPACIO_ARCHIVADOR_INSUFICIENTE));
+		DecoradorArchivador da = new Delegado(new ArchivadorSimple(NOMBRE_ARCHIVADOR, CONTENIDO_MENSAJE.length()));
 		Correo c = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
 
 		da.almacenarCorreo(c);
