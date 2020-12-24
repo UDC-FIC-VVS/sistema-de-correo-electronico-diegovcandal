@@ -11,9 +11,21 @@ public class ImagenTest {
 	private static final String MIME_TYPE = "image/png";
 
 	/**
-	 * Test del método obtenerMimeType, de la clase Imagen.
+	 * Test unitario del método obtenerMimeType, de la clase Imagen.
+	 * 
+	 * <p>
 	 * 
 	 * Obtiene el MimeType asociado a la clase
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos: Valores por defecto para casos donde
+	 * estos no influyan en la prueba.
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void obtenerMimeTypeTest() {
@@ -23,62 +35,4 @@ public class ImagenTest {
 		assertEquals(MIME_TYPE, a.obtenerMimeType());
 	}
 
-	/**
-	 * Test del método obtenerNombre, de la clase Imagen.
-	 * 
-	 * Obtiene el nombre de la Imagen
-	 */
-	@Test()
-	public void obtenerNombreTest() {
-
-		Archivo a = new Imagen(NOMBRE_IMAGEN, CONTENIDO_IMAGEN);
-
-		assertEquals(NOMBRE_IMAGEN, a.obtenerNombre());
-	}
-
-	/**
-	 * Test del método obtenerContenido, de la clase Imagen.
-	 * 
-	 * Obtiene el contenido de la Imagen
-	 */
-	@Test()
-	public void obtenerContenidoTest() {
-
-		Archivo a = new Imagen(NOMBRE_IMAGEN, CONTENIDO_IMAGEN);
-
-		assertEquals(CONTENIDO_IMAGEN, a.obtenerContenido());
-	}
-
-	/**
-	 * Test del método obtenerTamaño, de la clase Imagen.
-	 * 
-	 * Obtiene el tamaño del contenido de la Imagen
-	 */
-	@Test()
-	public void obtenerTamañoTest() {
-
-		Archivo a = new Imagen(NOMBRE_IMAGEN, CONTENIDO_IMAGEN);
-
-		assertEquals(CONTENIDO_IMAGEN.length(), a.obtenerTamaño());
-	}
-
-	/**
-	 * Test del método obtenerPreVisualizacion, de la clase Imagen.
-	 * 
-	 * Obtiene un string con la información general de la Imagen
-	 */
-	@Test()
-	public void obtenerPreVisualizacionTest() {
-
-		Archivo a = new Imagen(NOMBRE_IMAGEN, CONTENIDO_IMAGEN);
-
-		assertEquals(obtenerPreVisualizacion(a), a.obtenerPreVisualizacion());
-	}
-
-	/**
-	 * Método auxiliar para obtener la previsualización
-	 */
-	private String obtenerPreVisualizacion(Archivo archivo) {
-		return archivo.obtenerNombre() + "(" + archivo.obtenerTamaño() + " bytes, " + archivo.obtenerMimeType() + ")";
-	}
 }

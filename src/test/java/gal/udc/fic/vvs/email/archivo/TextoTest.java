@@ -11,9 +11,21 @@ public class TextoTest {
 	private static final String MIME_TYPE = "text/plain";
 
 	/**
-	 * Test del método obtenerMimeType, de la clase Texto.
+	 * Test unitario del método obtenerMimeType, de la clase Texto.
+	 * 
+	 * <p>
 	 * 
 	 * Obtiene el MimeType asociado a la clase
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos: Valores por defecto para casos donde
+	 * estos no influyan en la prueba.
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void obtenerMimeTypeTest() {
@@ -23,62 +35,4 @@ public class TextoTest {
 		assertEquals(MIME_TYPE, a.obtenerMimeType());
 	}
 
-	/**
-	 * Test del método obtenerNombre, de la clase Texto.
-	 * 
-	 * Obtiene el nombre del Texto
-	 */
-	@Test()
-	public void obtenerNombreTest() {
-
-		Archivo a = new Texto(NOMBRE_TEXTO, CONTENIDO_TEXTO);
-
-		assertEquals(NOMBRE_TEXTO, a.obtenerNombre());
-	}
-
-	/**
-	 * Test del método obtenerContenido, de la clase Texto.
-	 * 
-	 * Obtiene el contenido del Texto
-	 */
-	@Test()
-	public void obtenerContenidoTest() {
-
-		Archivo a = new Texto(NOMBRE_TEXTO, CONTENIDO_TEXTO);
-
-		assertEquals(CONTENIDO_TEXTO, a.obtenerContenido());
-	}
-
-	/**
-	 * Test del método obtenerTamaño, de la clase Texto.
-	 * 
-	 * Obtiene el tamaño del contenido del Texto
-	 */
-	@Test()
-	public void obtenerTamañoTest() {
-
-		Archivo a = new Texto(NOMBRE_TEXTO, CONTENIDO_TEXTO);
-
-		assertEquals(CONTENIDO_TEXTO.length(), a.obtenerTamaño());
-	}
-
-	/**
-	 * Test del método obtenerPreVisualizacion, de la clase Texto.
-	 * 
-	 * Obtiene un string con la información general del Texto
-	 */
-	@Test()
-	public void obtenerPreVisualizacionTest() {
-
-		Archivo a = new Texto(NOMBRE_TEXTO, CONTENIDO_TEXTO);
-
-		assertEquals(obtenerPreVisualizacion(a), a.obtenerPreVisualizacion());
-	}
-
-	/**
-	 * Método auxiliar para obtener la previsualización
-	 */
-	private String obtenerPreVisualizacion(Archivo archivo) {
-		return archivo.obtenerNombre() + "(" + archivo.obtenerTamaño() + " bytes, " + archivo.obtenerMimeType() + ")";
-	}
 }
