@@ -23,70 +23,24 @@ public class CabeceraTest {
 	public static final Integer ICONO_NUEVO_MENSAJE = 3;
 
 	/**
-	 * Test del método obtenerTamaño, de la clase Cabecera.
-	 * 
-	 * Obtiene la suma del tamaño del mensaje y la cabecera
-	 */
-	@Test()
-	public void obtenerTamañoTest() {
-
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Cabecera c = new Cabecera(m, NOMBRE_CABECERA, CONTENIDO_CABECERA);
-
-		assertEquals(m.obtenerTamaño() + NOMBRE_CABECERA.length() + CONTENIDO_CABECERA.length(), c.obtenerTamaño());
-	}
-
-	/**
-	 * Test del método obtenerTamaño, de la clase Cabecera.
-	 * 
-	 * Para mas de una cabecera obtiene la suma del tamaño del mensaje y las
-	 * cabeceras
-	 */
-	@Test()
-	public void obtenerTamañoCabeceraMultipleTest() {
-
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Cabecera c = new Cabecera(m, NOMBRE_CABECERA, CONTENIDO_CABECERA);
-		Cabecera c2 = new Cabecera(c, NOMBRE_CABECERA, CONTENIDO_CABECERA);
-
-		assertEquals(c.obtenerTamaño() + NOMBRE_CABECERA.length() + CONTENIDO_CABECERA.length(), c2.obtenerTamaño());
-	}
-
-	/**
-	 * Test del método obtenerVisualizacion, de la clase Cabecera.
-	 * 
-	 * Obtiene la visualizacion del mensaje y el archivo la cabecera
-	 */
-	@Test()
-	public void obtenerVisualizacionTest() {
-
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Cabecera c = new Cabecera(m, NOMBRE_CABECERA, CONTENIDO_CABECERA);
-
-		assertEquals(NOMBRE_CABECERA + ": " + CONTENIDO_CABECERA + "\n" + m.obtenerVisualizacion(),
-				c.obtenerVisualizacion());
-	}
-
-	/**
-	 * Test del método obtenerTamaño, de la clase Cabecera.
-	 * 
-	 * Para mas de una cabecera obtiene la visualizacion del mensaje y el archivo
-	 * las cabeceras
-	 */
-	@Test()
-	public void obtenerVisualizacionCabeceraMultipleTest() {
-
-		Cabecera c = crearCabecera();
-		Cabecera c2 = new Cabecera(c, NOMBRE_CABECERA, CONTENIDO_CABECERA);
-
-		assertEquals(NOMBRE_CABECERA + ": " + CONTENIDO_CABECERA + "\n" + c.obtenerVisualizacion(),
-				c2.obtenerVisualizacion());
-	}
-
-	/**
 	 * Test del método establecerLeido, de la clase Cabecera.
 	 * 
+	 * <p>
+	 * 
 	 * Obtiene los mensajes no leidos
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando cabeceras y mensajes con contenido
+	 * predefinido para tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void obtenerNoLeidosTest() {
@@ -99,7 +53,22 @@ public class CabeceraTest {
 	/**
 	 * Test del método establecerLeido, de la clase Cabecera.
 	 * 
+	 * <p>
+	 * 
 	 * Establece el mensaje como leido
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando cabeceras y mensajes con contenido
+	 * predefinido para tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void establecerLeidoTrueTest() {
@@ -115,7 +84,22 @@ public class CabeceraTest {
 	/**
 	 * Test del método establecerLeido, de la clase Cabecera.
 	 * 
+	 * <p>
+	 * 
 	 * Establece el mensaje como no leido
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando cabeceras y mensajes con contenido
+	 * predefinido para tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void establecerNoLeidoTrueTest() {
@@ -131,7 +115,22 @@ public class CabeceraTest {
 	/**
 	 * Test del método obtenerIcono, de la clase Cabecera.
 	 * 
+	 * <p>
+	 * 
 	 * Obtiene el icono si el mensaje esta marcado como leido
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando cabeceras y mensajes con contenido
+	 * predefinido para tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void obtenerIconoLeidoTest() {
@@ -146,7 +145,22 @@ public class CabeceraTest {
 	/**
 	 * Test del método obtenerIcono, de la clase Cabecera.
 	 * 
+	 * <p>
+	 * 
 	 * Obtiene el icono si el mensaje esta marcado como no leido
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando cabeceras y mensajes con contenido
+	 * predefinido para tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void obtenerIconoNoLeidoTest() {
@@ -157,54 +171,24 @@ public class CabeceraTest {
 	}
 
 	/**
-	 * Test del método obtenerPreVisualizacion, de la clase Cabecera.
-	 * 
-	 * Obtiene la previsualizacion del mensaje
-	 */
-	@Test()
-	public void obtenerPreVisualizacionTest() {
-
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Cabecera c = new Cabecera(m, NOMBRE_CABECERA, CONTENIDO_CABECERA);
-
-		assertEquals(m.obtenerPreVisualizacion(), c.obtenerPreVisualizacion());
-	}
-
-	/**
-	 * Test del método obtenerRuta, de la clase Cabecera.
-	 * 
-	 * Obtiene la ruta del mensaje
-	 */
-	@Test()
-	public void obtenerRutaTest() {
-
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Cabecera c = new Cabecera(m, NOMBRE_CABECERA, CONTENIDO_CABECERA);
-
-		assertEquals(m.obtenerRuta(), c.obtenerRuta());
-	}
-
-	/**
-	 * Test del método obtenerRuta, de la clase Cabecera.
-	 * 
-	 * Obtiene la ruta del mensaje con un padre asignado
-	 */
-	@Test()
-	public void obtenerRutaConPadreTest() {
-
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Cabecera cab = new Cabecera(m, NOMBRE_CABECERA, CONTENIDO_CABECERA);
-
-		Carpeta c = new Carpeta(NOMBRE_CARPETA);
-		cab.establecerPadre(c);
-
-		assertEquals(NOMBRE_CARPETA + " > " + m.obtenerPreVisualizacion(), cab.obtenerRuta());
-	}
-
-	/**
 	 * Test del método explorar, de la clase Cabecera.
 	 * 
+	 * <p>
+	 * 
 	 * Se devuelve una excepcion
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y negativo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando cabeceras y mensajes con contenido
+	 * predefinido para tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test(expected = OperacionInvalida.class)
 	public void explorarTest() throws OperacionInvalida {
@@ -217,7 +201,22 @@ public class CabeceraTest {
 	/**
 	 * Test del método añadir, de la clase Cabecera.
 	 * 
+	 * <p>
+	 * 
 	 * Se devuelve una excepcion
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y negativo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando cabeceras y mensajes con contenido
+	 * predefinido para tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test(expected = OperacionInvalida.class)
 	public void añadirTest() throws OperacionInvalida {
@@ -230,7 +229,22 @@ public class CabeceraTest {
 	/**
 	 * Test del método eliminar, de la clase Cabecera.
 	 * 
+	 * <p>
+	 * 
 	 * Se devuelve una excepcion
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y negativo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando cabeceras y mensajes con contenido
+	 * predefinido para tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test(expected = OperacionInvalida.class)
 	public void eliminarTest() throws OperacionInvalida {
@@ -243,7 +257,22 @@ public class CabeceraTest {
 	/**
 	 * Test del método obtenerHijo, de la clase Cabecera.
 	 * 
+	 * <p>
+	 * 
 	 * Se devuelve una excepcion
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y negativo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando cabeceras y mensajes con contenido
+	 * predefinido para tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test(expected = OperacionInvalida.class)
 	public void obtenerHijoTest() throws OperacionInvalida {
@@ -256,7 +285,22 @@ public class CabeceraTest {
 	/**
 	 * Test del método buscar, de la clase Cabecera.
 	 * 
+	 * <p>
+	 * 
 	 * Devuelve el mensaje si este hace match con el mismo
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando cabeceras y mensajes con contenido
+	 * predefinido para tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void buscarTest() {
@@ -272,7 +316,22 @@ public class CabeceraTest {
 	/**
 	 * Test del método buscar, de la clase Cabecera.
 	 * 
-	 * Devuelve el mensaje si este hace match con una cadena Adjunto
+	 * <p>
+	 * 
+	 * Devuelve el mensaje si este hace match con una cadena.
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando cabeceras y mensajes con contenido
+	 * predefinido para tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void buscarCadenaVaciaTest() {
@@ -288,8 +347,23 @@ public class CabeceraTest {
 	/**
 	 * Test del método buscar, de la clase Cabecera.
 	 * 
+	 * <p>
+	 * 
 	 * Comprueba que no se devuelve el mensaje si se introduce una cadena que no
 	 * pertence al mensaje
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando cabeceras y mensajes con contenido
+	 * predefinido para tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void buscarCadenaDistintaTest() {
@@ -302,7 +376,22 @@ public class CabeceraTest {
 	/**
 	 * Test del método establecerPadre, de la clase Cabecera.
 	 * 
+	 * <p>
+	 * 
 	 * Establece el padre del mensaje
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando cabeceras y mensajes con contenido
+	 * predefinido para tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void establecerObtenerPadreTest() throws OperacionInvalida {
@@ -318,7 +407,22 @@ public class CabeceraTest {
 	/**
 	 * Test del método obtenerPadre, de la clase Cabecera.
 	 * 
+	 * <p>
+	 * 
 	 * Obtiene el padre si no ha sido establecido anteriormente
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando cabeceras y mensajes con contenido
+	 * predefinido para tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void obtenerPadreNullTest() throws OperacionInvalida {
