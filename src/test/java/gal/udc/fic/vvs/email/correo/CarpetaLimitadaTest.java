@@ -10,7 +10,6 @@ public class CarpetaLimitadaTest {
 
 	private static final String NOMBRE_CARPETA = "Carpeta Nombre Test";
 	private static final String NOMBRE_MENSAJE = "Mensaje Nombre Test";
-	private static final String NOMBRE_CARPETA_PADRE = NOMBRE_CARPETA + " Padre";
 	private static final String CONTENIDO_MENSAJE = "Contenido de Mensaje Test";
 
 	public static final Integer ICONO_CARPETA = 1;
@@ -21,7 +20,22 @@ public class CarpetaLimitadaTest {
 	/**
 	 * Test del método obtenerIcono, de la clase CarpetaLimitada.
 	 * 
+	 * <p>
+	 * 
 	 * Obtiene el icono asociado a la clase
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando carpetas con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void obtenerIcono() {
@@ -34,7 +48,22 @@ public class CarpetaLimitadaTest {
 	/**
 	 * Test del método establecerLeido, de la clase CarpetaLimitada.
 	 * 
+	 * <p>
+	 * 
 	 * Establece todos los correos de la carpeta como leidos
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando carpetas con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void establecerLeidoTest() {
@@ -49,7 +78,22 @@ public class CarpetaLimitadaTest {
 	/**
 	 * Test del método establecerLeido, de la clase CarpetaLimitada.
 	 * 
+	 * <p>
+	 * 
 	 * Establece todos los correos de la carpeta como no leidos
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando carpetas con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void establecerNoLeidoTest() {
@@ -64,8 +108,23 @@ public class CarpetaLimitadaTest {
 	/**
 	 * Test del método establecerLeido, de la clase CarpetaLimitada.
 	 * 
+	 * <p>
+	 * 
 	 * Establece todos los correos de la carpeta como leidos con un hijo que es otra
 	 * carpeta
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando carpetas con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void establecerLeidoCarpetaAnidadaTest() throws OperacionInvalida {
@@ -81,8 +140,23 @@ public class CarpetaLimitadaTest {
 	/**
 	 * Test del método establecerLeido, de la clase CarpetaLimitada.
 	 * 
+	 * <p>
+	 * 
 	 * Establece todos los correos de la carpeta como no leidos con un hijo que es
 	 * otra carpeta
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando carpetas con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void establecerNoLeidoCarpetaAnidadaTest() throws OperacionInvalida {
@@ -98,7 +172,22 @@ public class CarpetaLimitadaTest {
 	/**
 	 * Test del método obtenerNoLeidos, de la clase CarpetaLimitada.
 	 * 
+	 * <p>
+	 * 
 	 * Obtiene la cantidad de correos no leidos dentro de la carpeta
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando carpetas con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void obtenerNoLeidosTest() {
@@ -111,8 +200,23 @@ public class CarpetaLimitadaTest {
 	/**
 	 * Test del método obtenerNoLeidos, de la clase CarpetaLimitada.
 	 * 
+	 * <p>
+	 * 
 	 * Establece todos los correos de la carpeta como leidos con un hijo que es otra
 	 * carpeta
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando carpetas con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void obtenerNoLeidosCarpetaAnidadaTest() throws OperacionInvalida {
@@ -126,51 +230,50 @@ public class CarpetaLimitadaTest {
 	/**
 	 * Test del método obtenerRuta, de la clase CarpetaLimitada.
 	 * 
+	 * <p>
+	 * 
 	 * Obtiene la ruta de la carpeta sin un padre asignado
-	 */
-	@Test()
-	public void obtenerRutaTest() {
-
-		CarpetaLimitada c = crearCarpetaLimitada();
-
-		assertEquals(NOMBRE_CARPETA + " (" + NUM_MENSAJES + ")", c.obtenerRuta());
-	}
-
-	/**
-	 * Test del método obtenerRuta, de la clase CarpetaLimitada.
 	 * 
-	 * Obtiene la ruta la carpeta con un padre asignado
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores frontera: para 0 mensajes en la carpeta el metodo obtenerRuta
+	 * devuelve un formato distinto
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
-	public void obtenerRutaConPadreTest() throws OperacionInvalida {
+	public void obtenerRutaTestSinMensajes() {
 
-		CarpetaLimitada c1 = crearCarpetaLimitada();
-		Carpeta c2 = new Carpeta(NOMBRE_CARPETA_PADRE);
+		CarpetaLimitada c = new CarpetaLimitada(new Carpeta(NOMBRE_CARPETA), TAM_CARPETA);
 
-		c2.añadir(c1);
-
-		assertEquals(
-				NOMBRE_CARPETA_PADRE + " (" + NUM_MENSAJES + ")" + " > " + NOMBRE_CARPETA + " (" + NUM_MENSAJES + ")",
-				c1.obtenerRuta());
+		assertEquals(NOMBRE_CARPETA, c.obtenerRuta());
 	}
 
 	/**
 	 * Test del método obtenerTamaño, de la clase CarpetaLimitada.
 	 * 
-	 * Obtiene el tamaño total de la carpeta y sus hijos
-	 */
-	@Test()
-	public void obtenerTamañoTest() {
-
-		CarpetaLimitada c = crearCarpetaLimitada();
-
-		assertEquals(CONTENIDO_MENSAJE.length() * NUM_MENSAJES, c.obtenerTamaño());
-	}
-
-	/**
-	 * Test del método obtenerTamaño, de la clase CarpetaLimitada.
+	 * <p>
 	 * 
 	 * Obtiene el tamaño total de una carpeta sin hijos
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando carpetas con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void obtenerTamañoCarpetaVaciaTest() {
@@ -181,23 +284,24 @@ public class CarpetaLimitadaTest {
 	}
 
 	/**
-	 * Test del método obtenerTamaño, de la clase CarpetaLimitada.
-	 * 
-	 * Obtiene el tamaño total de una carpeta con un hijo que es otra carpeta
-	 */
-	@Test()
-	public void obtenerTamañoCarpetaAnidadaTest() throws OperacionInvalida {
-
-		CarpetaLimitada c = crearCarpetaLimitada();
-		c.añadir(crearCarpeta());
-
-		assertEquals(CONTENIDO_MENSAJE.length() * NUM_MENSAJES * 2, c.obtenerTamaño());
-	}
-
-	/**
 	 * Test del método obtenerVisualizacion, de la clase CarpetaLimitada.
 	 * 
+	 * <p>
+	 * 
 	 * Obtiene la visualizacion de la carpeta
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando carpetas con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void obtenerVisualizacionTest() {
@@ -210,7 +314,22 @@ public class CarpetaLimitadaTest {
 	/**
 	 * Test del método obtenerPreVisualizacion, de la clase CarpetaLimitada.
 	 * 
+	 * <p>
+	 * 
 	 * Obtiene la previsualizacion (la visualizacion normal) de la carpeta
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando carpetas con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void obtenerPreVisualizacionTest() {
@@ -223,8 +342,23 @@ public class CarpetaLimitadaTest {
 	/**
 	 * Test del método obtenerPreVisualizacion, de la clase CarpetaLimitada.
 	 * 
+	 * <p>
+	 * 
 	 * Obtiene la previsualizacion (la visualizacion normal) de la carpeta con todos
 	 * sus mensajes marcados como leidos
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando carpetas con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void obtenerPreVisualizacionMensajesLeidosTest() {
@@ -238,8 +372,23 @@ public class CarpetaLimitadaTest {
 	/**
 	 * Test del método obtenerPreVisualizacion, de la clase CarpetaLimitada.
 	 * 
+	 * <p>
+	 * 
 	 * Obtiene la previsualizacion (la visualizacion normal) de la carpeta con un
 	 * hijo que es otra carpeta
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando carpetas con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void obtenerPreVisualizacionCarpetaAnidadaTest() throws OperacionInvalida {
@@ -253,8 +402,23 @@ public class CarpetaLimitadaTest {
 	/**
 	 * Test del método obtenerPreVisualizacion, de la clase CarpetaLimitada.
 	 * 
+	 * <p>
+	 * 
 	 * Obtiene la previsualizacion (la visualizacion normal) de la carpeta sin
 	 * ningun mensaje hijo
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando carpetas con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void obtenerPreVisualizacionCarpetaVaciaTest() {
@@ -267,20 +431,22 @@ public class CarpetaLimitadaTest {
 	/**
 	 * Test del método explorar, de la clase CarpetaLimitada.
 	 * 
-	 * Devuelve todos los hijos
-	 */
-	@Test()
-	public void explorarTest() throws OperacionInvalida {
-
-		CarpetaLimitada c = crearCarpetaLimitada();
-
-		assertEquals(NUM_MENSAJES, c.explorar().size());
-	}
-
-	/**
-	 * Test del método explorar, de la clase CarpetaLimitada.
+	 * <p>
 	 * 
 	 * Devuelve todos los hijos de una carpeta vacia
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando carpetas con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void explorarCarpetaVaciaTest() throws OperacionInvalida {
@@ -293,7 +459,22 @@ public class CarpetaLimitadaTest {
 	/**
 	 * Test del método añadir, de la clase CarpetaLimitada.
 	 * 
+	 * <p>
+	 * 
 	 * Añade un hijo a la carpeta
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando carpetas con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void añadirTest() throws OperacionInvalida {
@@ -308,7 +489,22 @@ public class CarpetaLimitadaTest {
 	/**
 	 * Test del método añadir, de la clase CarpetaLimitada.
 	 * 
+	 * <p>
+	 * 
 	 * Añade un hijo de una carpeta a otra
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando carpetas con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void añadirMensajeDeOtraCarpetaTest() throws OperacionInvalida {
@@ -326,7 +522,22 @@ public class CarpetaLimitadaTest {
 	/**
 	 * Test del método añadir, de la clase CarpetaLimitada.
 	 * 
+	 * <p>
+	 * 
 	 * Añade una carpeta como hija de otra
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando carpetas con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void añadirCarpetaTest() throws OperacionInvalida {
@@ -342,7 +553,22 @@ public class CarpetaLimitadaTest {
 	/**
 	 * Test del método eliminar, de la clase CarpetaLimitada.
 	 * 
+	 * <p>
+	 * 
 	 * Elimina un hijo de la carpeta
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando carpetas con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void eliminarTest() throws OperacionInvalida {
@@ -359,7 +585,22 @@ public class CarpetaLimitadaTest {
 	/**
 	 * Test del método eliminar, de la clase CarpetaLimitada.
 	 * 
+	 * <p>
+	 * 
 	 * Elimina una carpeta hija de otra
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando carpetas con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void eliminarCarpetaTest() throws OperacionInvalida {
@@ -376,7 +617,22 @@ public class CarpetaLimitadaTest {
 	/**
 	 * Test del método eliminar, de la clase CarpetaLimitada.
 	 * 
+	 * <p>
+	 * 
 	 * Elimina un hijo que no existe de la carpeta
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y negativo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando carpetas con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void eliminarMensajeNoExistenteTest() throws OperacionInvalida {
@@ -394,7 +650,22 @@ public class CarpetaLimitadaTest {
 	/**
 	 * Test del método obtenerHijo, de la clase CarpetaLimitada.
 	 * 
+	 * <p>
+	 * 
 	 * Obtiene el hijo en cierta posicion
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando carpetas con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void obtenerHijoTest() throws OperacionInvalida {
@@ -409,7 +680,22 @@ public class CarpetaLimitadaTest {
 	/**
 	 * Test del método obtenerHijo, de la clase CarpetaLimitada.
 	 * 
+	 * <p>
+	 * 
 	 * Obtiene el hijo inexistente en cierta posicion
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y negativo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando carpetas con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test(expected = ArrayIndexOutOfBoundsException.class)
 	public void obtenerHijoNoExisteTest() throws OperacionInvalida {
@@ -422,7 +708,22 @@ public class CarpetaLimitadaTest {
 	/**
 	 * Test del método buscar, de la clase CarpetaLimitada.
 	 * 
+	 * <p>
+	 * 
 	 * Devuelve los hijos que hacen match con la cadena de busqueda
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando carpetas con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void buscarTest() throws OperacionInvalida {
@@ -435,8 +736,23 @@ public class CarpetaLimitadaTest {
 	/**
 	 * Test del método buscar, de la clase CarpetaLimitada.
 	 * 
+	 * <p>
+	 * 
 	 * Devuelve los hijos que hacen match con la cadena de busqueda sobrepasando el
 	 * limite de elementos encontrados
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando carpetas con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void buscarLimiteElementosTest() throws OperacionInvalida {
@@ -453,8 +769,23 @@ public class CarpetaLimitadaTest {
 	/**
 	 * Test del método buscar, de la clase CarpetaLimitada.
 	 * 
+	 * <p>
+	 * 
 	 * Devuelve los hijos que hacen match con la cadena de busqueda para una carpeta
 	 * vacia
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando carpetas con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void buscarCarpetaVaciaTest() throws OperacionInvalida {
@@ -467,7 +798,22 @@ public class CarpetaLimitadaTest {
 	/**
 	 * Test del método buscar, de la clase CarpetaLimitada.
 	 * 
+	 * <p>
+	 * 
 	 * Devuelve los hijos que hacen match con la cadena de busqueda
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando carpetas con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void buscarSinResultadosTest() throws OperacionInvalida {
@@ -480,8 +826,23 @@ public class CarpetaLimitadaTest {
 	/**
 	 * Test del método buscar, de la clase CarpetaLimitada.
 	 * 
+	 * <p>
+	 * 
 	 * Devuelve los hijos que hacen match con la cadena de busqueda con un hijo que
 	 * es otra carpeta
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando carpetas con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void buscarCarpetaAnidadaTest() throws OperacionInvalida {
