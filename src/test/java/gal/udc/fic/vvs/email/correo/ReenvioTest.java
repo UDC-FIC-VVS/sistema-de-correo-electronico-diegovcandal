@@ -23,79 +23,24 @@ public class ReenvioTest {
 	public static final Integer ICONO_NUEVO_MENSAJE = 3;
 
 	/**
-	 * Test del método obtenerTamaño, de la clase Reenvio.
-	 * 
-	 * Obtiene la suma del tamaño del mensaje y el correo reenviado
-	 */
-	@Test()
-	public void obtenerTamañoTest() {
-
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Mensaje m_reenviado = new Mensaje(new Texto(NOMBRE_MENSAJE_REENVIADO, CONTENIDO_MENSAJE_REENVIADO));
-
-		Correo r = new Reenvio(m, m_reenviado);
-
-		assertEquals(m.obtenerTamaño() + m_reenviado.obtenerTamaño(), r.obtenerTamaño());
-	}
-
-	/**
-	 * Test del método obtenerTamaño, de la clase Reenvio.
-	 * 
-	 * Para mas de un reenvio, obtiene la suma del tamaño del mensaje y los correos
-	 * reenviados
-	 */
-	@Test()
-	public void obtenerTamañoReenvioMultipleTest() {
-
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Mensaje m_reenviado = new Mensaje(new Texto(NOMBRE_MENSAJE_REENVIADO, CONTENIDO_MENSAJE_REENVIADO));
-
-		Correo r = new Reenvio(m, m_reenviado);
-		Correo r2 = new Reenvio(m, r);
-
-		assertEquals(m.obtenerTamaño() + r.obtenerTamaño(), r2.obtenerTamaño());
-	}
-
-	/**
-	 * Test del método obtenerVisualizacion, de la clase Reenvio.
-	 * 
-	 * Obtiene la visualizacion del mensaje y el correo reenviado
-	 */
-	@Test()
-	public void obtenerVisualizacionTest() {
-
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Mensaje m_reenviado = new Mensaje(new Texto(NOMBRE_MENSAJE_REENVIADO, CONTENIDO_MENSAJE_REENVIADO));
-
-		Correo r = new Reenvio(m, m_reenviado);
-
-		assertEquals(m.obtenerVisualizacion() + "\n\n---- Correo reenviado ----\n\n"
-				+ m_reenviado.obtenerVisualizacion() + "\n---- Fin correo reenviado ----", r.obtenerVisualizacion());
-	}
-
-	/**
-	 * Test del método obtenerTamaño, de la clase Reenvio.
-	 * 
-	 * Para mas de un reenvio, obtiene la visualizacion del mensaje y los correos
-	 * reenviados
-	 */
-	@Test()
-	public void obtenerVisualizacionReenvioMultipleTest() {
-
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Mensaje m_reenviado = new Mensaje(new Texto(NOMBRE_MENSAJE_REENVIADO, CONTENIDO_MENSAJE_REENVIADO));
-
-		Correo r = new Reenvio(m, m_reenviado);
-		Correo r2 = new Reenvio(m, r);
-
-		assertEquals(m.obtenerVisualizacion() + "\n\n---- Correo reenviado ----\n\n" + r.obtenerVisualizacion()
-				+ "\n---- Fin correo reenviado ----", r2.obtenerVisualizacion());
-	}
-
-	/**
 	 * Test del método establecerLeido, de la clase Reenvio.
 	 * 
+	 * <p>
+	 * 
 	 * Obtiene los mensajes no leidos
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando mensajes con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void obtenerNoLeidosTest() {
@@ -108,7 +53,22 @@ public class ReenvioTest {
 	/**
 	 * Test del método establecerLeido, de la clase Reenvio.
 	 * 
+	 * <p>
+	 * 
 	 * Establece el mensaje como leido
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando mensajes con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void establecerLeidoTrueTest() {
@@ -126,7 +86,22 @@ public class ReenvioTest {
 	/**
 	 * Test del método establecerLeido, de la clase Reenvio.
 	 * 
+	 * <p>
+	 * 
 	 * Establece el mensaje como no leido
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando mensajes con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void establecerNoLeidoTrueTest() {
@@ -144,7 +119,22 @@ public class ReenvioTest {
 	/**
 	 * Test del método obtenerIcono, de la clase Reenvio.
 	 * 
+	 * <p>
+	 * 
 	 * Obtiene el icono si el mensaje esta marcado como leido
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando mensajes con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void obtenerIconoLeidoTest() {
@@ -159,7 +149,22 @@ public class ReenvioTest {
 	/**
 	 * Test del método obtenerIcono, de la clase Reenvio.
 	 * 
+	 * <p>
+	 * 
 	 * Obtiene el icono si el mensaje esta marcado como no leido
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando mensajes con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void obtenerIconoNoLeidoTest() {
@@ -170,60 +175,24 @@ public class ReenvioTest {
 	}
 
 	/**
-	 * Test del método obtenerPreVisualizacion, de la clase Reenvio.
-	 * 
-	 * Obtiene la previsualizacion del mensaje
-	 */
-	@Test()
-	public void obtenerPreVisualizacionTest() {
-
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Mensaje m_reenviado = new Mensaje(new Texto(NOMBRE_MENSAJE_REENVIADO, CONTENIDO_MENSAJE_REENVIADO));
-
-		Correo r = new Reenvio(m, m_reenviado);
-
-		assertEquals(m.obtenerPreVisualizacion(), r.obtenerPreVisualizacion());
-	}
-
-	/**
-	 * Test del método obtenerRuta, de la clase Reenvio.
-	 * 
-	 * Obtiene la ruta del reenvio
-	 */
-	@Test()
-	public void obtenerRutaTest() {
-
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Mensaje m_reenviado = new Mensaje(new Texto(NOMBRE_MENSAJE_REENVIADO, CONTENIDO_MENSAJE_REENVIADO));
-
-		Correo r = new Reenvio(m, m_reenviado);
-
-		assertEquals(m.obtenerRuta(), r.obtenerRuta());
-	}
-
-	/**
-	 * Test del método obtenerRuta, de la clase Reenvio.
-	 * 
-	 * Obtiene la ruta del reenvio con un padre asignado
-	 */
-	@Test()
-	public void obtenerRutaConPadreTest() {
-
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Mensaje m_reenviado = new Mensaje(new Texto(NOMBRE_MENSAJE_REENVIADO, CONTENIDO_MENSAJE_REENVIADO));
-
-		Reenvio r = new Reenvio(m, m_reenviado);
-
-		Carpeta c = new Carpeta(NOMBRE_CARPETA);
-		r.establecerPadre(c);
-
-		assertEquals(NOMBRE_CARPETA + " > " + m.obtenerPreVisualizacion(), r.obtenerRuta());
-	}
-
-	/**
 	 * Test del método explorar, de la clase Reenvio.
 	 * 
+	 * <p>
+	 * 
 	 * Se devuelve una excepcion
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y negativo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando mensajes con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test(expected = OperacionInvalida.class)
 	public void explorarTest() throws OperacionInvalida {
@@ -236,7 +205,22 @@ public class ReenvioTest {
 	/**
 	 * Test del método añadir, de la clase Reenvio.
 	 * 
+	 * <p>
+	 * 
 	 * Se devuelve una excepcion
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y negativo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando mensajes con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test(expected = OperacionInvalida.class)
 	public void añadirTest() throws OperacionInvalida {
@@ -249,7 +233,22 @@ public class ReenvioTest {
 	/**
 	 * Test del método eliminar, de la clase Reenvio.
 	 * 
+	 * <p>
+	 * 
 	 * Se devuelve una excepcion
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y negativo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando mensajes con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test(expected = OperacionInvalida.class)
 	public void eliminarTest() throws OperacionInvalida {
@@ -262,7 +261,22 @@ public class ReenvioTest {
 	/**
 	 * Test del método obtenerHijo, de la clase Reenvio.
 	 * 
+	 * <p>
+	 * 
 	 * Se devuelve una excepcion
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y negativo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando mensajes con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test(expected = OperacionInvalida.class)
 	public void obtenerHijoTest() throws OperacionInvalida {
@@ -275,7 +289,22 @@ public class ReenvioTest {
 	/**
 	 * Test del método buscar, de la clase Reenvio.
 	 * 
+	 * <p>
+	 * 
 	 * Devuelve el reenvio si este hace match con el mismo
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando mensajes con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void buscarTest() {
@@ -291,7 +320,22 @@ public class ReenvioTest {
 	/**
 	 * Test del método buscar, de la clase Reenvio.
 	 * 
+	 * <p>
+	 * 
 	 * Devuelve el reenvio si este hace match con una cadena vacia
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando mensajes con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void buscarCadenaVaciaTest() {
@@ -307,8 +351,23 @@ public class ReenvioTest {
 	/**
 	 * Test del método buscar, de la clase Reenvio.
 	 * 
+	 * <p>
+	 * 
 	 * Comprueba que no se devuelve el reenvio si se introduce una cadena que no
 	 * pertence al mensaje
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando mensajes con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void buscarCadenaDistintaTest() {
@@ -321,7 +380,22 @@ public class ReenvioTest {
 	/**
 	 * Test del método establecerPadre, de la clase Reenvio.
 	 * 
+	 * <p>
+	 * 
 	 * Establece el padre del reenvio
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando mensajes con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void establecerObtenerPadreTest() throws OperacionInvalida {
@@ -336,7 +410,22 @@ public class ReenvioTest {
 	/**
 	 * Test del método obtenerPadre, de la clase Reenvio.
 	 * 
+	 * <p>
+	 * 
 	 * Obtiene el padre si no ha sido establecido anteriormente
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando mensajes con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void obtenerPadreNullTest() throws OperacionInvalida {
