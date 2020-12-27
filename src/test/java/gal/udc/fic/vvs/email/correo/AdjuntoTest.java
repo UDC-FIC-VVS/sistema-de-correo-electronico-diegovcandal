@@ -25,79 +25,24 @@ public class AdjuntoTest {
 	public static final Integer ICONO_NUEVO_MENSAJE = 3;
 
 	/**
-	 * Test del método obtenerTamaño, de la clase Adjunto.
-	 * 
-	 * Obtiene la suma del tamaño del mensaje y el archivo adjunto
-	 */
-	@Test()
-	public void obtenerTamañoTest() {
-
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Archivo ar = new Imagen(NOMBRE_ADJUNTO, CONTENIDO_ADJUNTO);
-
-		Adjunto r = new Adjunto(m, ar);
-
-		assertEquals(m.obtenerTamaño() + ar.obtenerTamaño(), r.obtenerTamaño());
-	}
-
-	/**
-	 * Test del método obtenerTamaño, de la clase Adjunto.
-	 * 
-	 * Para mas de un adjunto, obtiene la suma del tamaño del mensaje y los archivos
-	 * adjuntados
-	 */
-	@Test()
-	public void obtenerTamañoAdjuntoMultipleTest() {
-
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Archivo ar = new Imagen(NOMBRE_ADJUNTO, CONTENIDO_ADJUNTO);
-
-		Adjunto r = new Adjunto(m, ar);
-		Adjunto r2 = new Adjunto(r, ar);
-
-		assertEquals(r.obtenerTamaño() + ar.obtenerTamaño(), r2.obtenerTamaño());
-	}
-
-	/**
-	 * Test del método obtenerVisualizacion, de la clase Adjunto.
-	 * 
-	 * Obtiene la visualizacion del mensaje y el archivo adjunto
-	 */
-	@Test()
-	public void obtenerVisualizacionTest() {
-
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Archivo ar = new Imagen(NOMBRE_ADJUNTO, CONTENIDO_ADJUNTO);
-
-		Adjunto r = new Adjunto(m, ar);
-
-		assertEquals(m.obtenerVisualizacion() + "\n\nAdxunto: " + ar.obtenerPreVisualizacion(),
-				r.obtenerVisualizacion());
-	}
-
-	/**
-	 * Test del método obtenerTamaño, de la clase Adjunto.
-	 * 
-	 * Para mas de un adjunto, obtiene la visualizacion del mensaje y los archivos
-	 * adjuntados
-	 */
-	@Test()
-	public void obtenerVisualizacionAdjuntoMultipleTest() {
-
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Archivo ar = new Imagen(NOMBRE_ADJUNTO, CONTENIDO_ADJUNTO);
-
-		Adjunto r = new Adjunto(m, ar);
-		Adjunto r2 = new Adjunto(r, ar);
-
-		assertEquals(r.obtenerVisualizacion() + "\n\nAdxunto: " + ar.obtenerPreVisualizacion(),
-				r2.obtenerVisualizacion());
-	}
-
-	/**
 	 * Test del método establecerLeido, de la clase Adjunto.
 	 * 
+	 * <p>
+	 * 
 	 * Obtiene los mensajes no leidos
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando archivos con contenido predefinido para
+	 * tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void obtenerNoLeidosTest() {
@@ -110,7 +55,22 @@ public class AdjuntoTest {
 	/**
 	 * Test del método establecerLeido, de la clase Adjunto.
 	 * 
+	 * <p>
+	 * 
 	 * Establece el mensaje como leido
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando archivos y mensajes con contenido
+	 * predefinido para tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void establecerLeidoTrueTest() {
@@ -128,7 +88,22 @@ public class AdjuntoTest {
 	/**
 	 * Test del método establecerLeido, de la clase Adjunto.
 	 * 
+	 * <p>
+	 * 
 	 * Establece el mensaje como no leido
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando archivos y mensajes con contenido
+	 * predefinido para tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void establecerNoLeidoTrueTest() {
@@ -146,7 +121,22 @@ public class AdjuntoTest {
 	/**
 	 * Test del método obtenerIcono, de la clase Adjunto.
 	 * 
+	 * <p>
+	 * 
 	 * Obtiene el icono si el mensaje esta marcado como leido
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando archivos y mensajes con contenido
+	 * predefinido para tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void obtenerIconoLeidoTest() {
@@ -161,7 +151,22 @@ public class AdjuntoTest {
 	/**
 	 * Test del método obtenerIcono, de la clase Adjunto.
 	 * 
+	 * <p>
+	 * 
 	 * Obtiene el icono si el mensaje esta marcado como no leido
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando archivos y mensajes con contenido
+	 * predefinido para tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void obtenerIconoNoLeidoTest() {
@@ -172,60 +177,24 @@ public class AdjuntoTest {
 	}
 
 	/**
-	 * Test del método obtenerPreVisualizacion, de la clase Adjunto.
-	 * 
-	 * Obtiene la previsualizacion del mensaje
-	 */
-	@Test()
-	public void obtenerPreVisualizacionTest() {
-
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Archivo ar = new Imagen(NOMBRE_ADJUNTO, CONTENIDO_ADJUNTO);
-
-		Adjunto r = new Adjunto(m, ar);
-
-		assertEquals(m.obtenerPreVisualizacion(), r.obtenerPreVisualizacion());
-	}
-
-	/**
-	 * Test del método obtenerRuta, de la clase Adjunto.
-	 * 
-	 * Obtiene la ruta del mensaje
-	 */
-	@Test()
-	public void obtenerRutaTest() {
-
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Archivo ar = new Imagen(NOMBRE_ADJUNTO, CONTENIDO_ADJUNTO);
-
-		Adjunto r = new Adjunto(m, ar);
-
-		assertEquals(m.obtenerRuta(), r.obtenerRuta());
-	}
-
-	/**
-	 * Test del método obtenerRuta, de la clase Adjunto.
-	 * 
-	 * Obtiene la ruta del mensaje con un padre asignado
-	 */
-	@Test()
-	public void obtenerRutaConPadreTest() {
-
-		Mensaje m = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
-		Archivo ar = new Imagen(NOMBRE_ADJUNTO, CONTENIDO_ADJUNTO);
-
-		Adjunto r = new Adjunto(m, ar);
-
-		Carpeta c = new Carpeta(NOMBRE_CARPETA);
-		r.establecerPadre(c);
-
-		assertEquals(NOMBRE_CARPETA + " > " + m.obtenerPreVisualizacion(), r.obtenerRuta());
-	}
-
-	/**
 	 * Test del método explorar, de la clase Adjunto.
 	 * 
+	 * <p>
+	 * 
 	 * Se devuelve una excepcion
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y negativo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando archivos y mensajes con contenido
+	 * predefinido para tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test(expected = OperacionInvalida.class)
 	public void explorarTest() throws OperacionInvalida {
@@ -238,7 +207,22 @@ public class AdjuntoTest {
 	/**
 	 * Test del método añadir, de la clase Adjunto.
 	 * 
+	 * <p>
+	 * 
 	 * Se devuelve una excepcion
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y negativo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando archivos y mensajes con contenido
+	 * predefinido para tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test(expected = OperacionInvalida.class)
 	public void añadirTest() throws OperacionInvalida {
@@ -251,7 +235,22 @@ public class AdjuntoTest {
 	/**
 	 * Test del método eliminar, de la clase Adjunto.
 	 * 
+	 * <p>
+	 * 
 	 * Se devuelve una excepcion
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y negativo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando archivos y mensajes con contenido
+	 * predefinido para tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test(expected = OperacionInvalida.class)
 	public void eliminarTest() throws OperacionInvalida {
@@ -264,7 +263,22 @@ public class AdjuntoTest {
 	/**
 	 * Test del método obtenerHijo, de la clase Adjunto.
 	 * 
+	 * <p>
+	 * 
 	 * Se devuelve una excepcion
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y negativo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando archivos y mensajes con contenido
+	 * predefinido para tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test(expected = OperacionInvalida.class)
 	public void obtenerHijoTest() throws OperacionInvalida {
@@ -277,7 +291,22 @@ public class AdjuntoTest {
 	/**
 	 * Test del método buscar, de la clase Adjunto.
 	 * 
+	 * <p>
+	 * 
 	 * Devuelve el mensaje si este hace match con el mismo
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando archivos y mensajes con contenido
+	 * predefinido para tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void buscarTest() {
@@ -293,7 +322,22 @@ public class AdjuntoTest {
 	/**
 	 * Test del método buscar, de la clase Adjunto.
 	 * 
+	 * <p>
+	 * 
 	 * Devuelve el mensaje si este hace match con una cadena Adjunto
+	 *
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando archivos y mensajes con contenido
+	 * predefinido para tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void buscarCadenaVaciaTest() {
@@ -309,8 +353,23 @@ public class AdjuntoTest {
 	/**
 	 * Test del método buscar, de la clase Adjunto.
 	 * 
+	 * <p>
+	 * 
 	 * Comprueba que no se devuelve el mensaje si se introduce una cadena que no
 	 * pertence al mensaje
+	 *
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando archivos y mensajes con contenido
+	 * predefinido para tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void buscarCadenaDistintaTest() {
@@ -323,7 +382,22 @@ public class AdjuntoTest {
 	/**
 	 * Test del método establecerPadre, de la clase Adjunto.
 	 * 
+	 * <p>
+	 * 
 	 * Establece el padre del mensaje
+	 *
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando archivos y mensajes con contenido
+	 * predefinido para tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void establecerObtenerPadreTest() throws OperacionInvalida {
@@ -339,7 +413,22 @@ public class AdjuntoTest {
 	/**
 	 * Test del método obtenerPadre, de la clase Adjunto.
 	 * 
+	 * <p>
+	 * 
 	 * Obtiene el padre si no ha sido establecido anteriormente
+	 *
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores por defecto, creando archivos y mensajes con contenido
+	 * predefinido para tests generales
+	 * </ul>
+	 * </ul>
+	 * 
 	 */
 	@Test()
 	public void obtenerPadreNullTest() throws OperacionInvalida {
