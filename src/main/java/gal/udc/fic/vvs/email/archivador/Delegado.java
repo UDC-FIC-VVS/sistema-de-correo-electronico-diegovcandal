@@ -1,28 +1,42 @@
 package gal.udc.fic.vvs.email.archivador;
 
+import etm.core.configuration.EtmManager;
+import etm.core.monitor.EtmMonitor;
+import etm.core.monitor.EtmPoint;
 import gal.udc.fic.vvs.email.correo.Correo;
 
 public class Delegado extends DecoradorArchivador {
 
-    public Delegado(Archivador decorado) {
-        super(decorado);
-    }
+	public Delegado(Archivador decorado) {
+		super(decorado);
+	}
 
-    public boolean almacenarCorreo(Correo correo) {
-        if (!super.almacenarCorreo(correo)) {
-            return _delegado.almacenarCorreo(correo);
-        }
-        return true;
-    }
+	public boolean almacenarCorreo(Correo correo) {
 
-    public Archivador obtenerDelegado() {
-        return _delegado;
-    }
+		EtmPoint point = etmMonitor.createPoint(getClass().getName() + "#almacenarCorreo");
 
-    public void establecerDelegado(Archivador archivador) {
-        _delegado = archivador;
-    }
+		if (!super.almacenarCorreo(correo)) {
 
-    private Archivador _delegado;
+			point.collect();
+
+			return _delegado.almacenarCorreo(correo);
+		}
+
+		point.collect();
+
+		return true;
+	}
+
+	public Archivador obtenerDelegado() {
+		return _delegado;
+	}
+
+	public void establecerDelegado(Archivador archivador) {
+		_delegado = archivador;
+	}
+
+	private Archivador _delegado;
+
+	private static final EtmMonitor etmMonitor = EtmManager.getEtmMonitor();
 
 }

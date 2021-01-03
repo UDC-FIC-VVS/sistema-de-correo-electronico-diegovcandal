@@ -4,11 +4,12 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+import gal.udc.fic.vvs.email.TestSetupGeneral;
 import gal.udc.fic.vvs.email.archivo.Texto;
 import gal.udc.fic.vvs.email.correo.Correo;
 import gal.udc.fic.vvs.email.correo.Mensaje;
 
-public class DelegadoTest {
+public class DelegadoTest extends TestSetupGeneral {
 
 	private static final String NOMBRE_ARCHIVADOR = "Archivador Nombre Test";
 	private static final String NOMBRE_ARCHIVADOR_DELEGADO = "Archivador Delegado Nombre Test";
