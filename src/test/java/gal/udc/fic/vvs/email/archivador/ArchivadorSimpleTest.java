@@ -1,7 +1,11 @@
 package gal.udc.fic.vvs.email.archivador;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+
+import java.lang.reflect.Field;
+import java.util.Vector;
 
 import org.junit.Test;
 
@@ -71,6 +75,49 @@ public class ArchivadorSimpleTest extends TestSetupGeneral {
 		Correo c = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
 
 		assertFalse(as.almacenarCorreo(c));
+	}
+
+	/**
+	 * Test unitario, del método almacenarCorreo, de la clase ArchivadorSimple.
+	 * 
+	 * <p>
+	 * 
+	 * Añade un mail correctamente a un ArchivadorSimple vacio y comprueba que el
+	 * Vector _correos se modifica correctamente
+	 * 
+	 * <p>
+	 * 
+	 * <ul>
+	 * <li>Nivel de la prueba: Test Unitario.
+	 * <li>Categoria de la prueba: Test funcional dinamico de caja negra y positivo.
+	 * <li>Mecanismo de selección de datos:
+	 * <ul>
+	 * <li>Valores frontera, el tamaño del mensaje es el maximo para poder ser
+	 * almacenado
+	 * </ul>
+	 * </ul>
+	 * 
+	 * @throws SecurityException
+	 * @throws NoSuchFieldException
+	 * @throws IllegalAccessException
+	 * @throws IllegalArgumentException
+	 */
+	@Test
+	public void almacenarCorreoTamañoVectorExactoTest()
+			throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
+
+		ArchivadorSimple as = new ArchivadorSimple(NOMBRE_ARCHIVADOR, CONTENIDO_MENSAJE.length() + 1);
+		Correo c = new Mensaje(new Texto(NOMBRE_MENSAJE, CONTENIDO_MENSAJE));
+
+		as.almacenarCorreo(c);
+
+		Field privateCorreosField = ArchivadorSimple.class.getDeclaredField("_correos");
+
+		privateCorreosField.setAccessible(true);
+
+		Vector _correos = (Vector) privateCorreosField.get(as);
+
+		assertEquals(1, _correos.size());
 	}
 
 }
