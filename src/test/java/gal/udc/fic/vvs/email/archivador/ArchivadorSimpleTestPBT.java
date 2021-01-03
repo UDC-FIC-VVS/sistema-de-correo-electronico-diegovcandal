@@ -12,12 +12,13 @@ import org.junit.runner.RunWith;
 import com.pholser.junit.quickcheck.Property;
 import com.pholser.junit.quickcheck.runner.JUnitQuickcheck;
 
+import gal.udc.fic.vvs.email.TestSetupGeneral;
 import gal.udc.fic.vvs.email.archivo.Texto;
 import gal.udc.fic.vvs.email.correo.Correo;
 import gal.udc.fic.vvs.email.correo.Mensaje;
 
 @RunWith(JUnitQuickcheck.class)
-public class ArchivadorSimpleTestPBT {
+public class ArchivadorSimpleTestPBT extends TestSetupGeneral {
 
 	private static final String NOMBRE_ARCHIVADOR_DEFECTO = "Archivador Nombre Test";
 	private static final String NOMBRE_MENSAJE_DEFECTO = "Mensaje Nombre Test";
