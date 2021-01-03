@@ -99,6 +99,7 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
+        
         <plugin>
 		    <groupId>org.apache.maven.plugins</groupId>
 		    <artifactId>maven-checkstyle-plugin</artifactId>
@@ -122,6 +123,7 @@
 		        </execution>
 		    </executions>
 		</plugin>
+		
 		<plugin>
 		  <groupId>com.github.spotbugs</groupId>
 		  <artifactId>spotbugs-maven-plugin</artifactId>
@@ -138,6 +140,30 @@
 		    </dependency>
 		  </dependencies>
 		</plugin>
+		
+		<plugin>
+		    <groupId>org.pitest</groupId>
+		    <artifactId>pitest-maven</artifactId>
+		    <version>1.6.2</version>
+		    <configuration>
+		        <targetClasses>
+		            <param>gal.udc.fic.vvs.email.archivador*</param>
+		            <param>gal.udc.fic.vvs.email.archivo*</param>
+		            <param>gal.udc.fic.vvs.email.correo*</param>
+		        </targetClasses>
+		        <targetTests>
+		            <param>gal.udc.fic.vvs.email.archivador*</param>
+		            <param>gal.udc.fic.vvs.email.archivo*</param>
+		            <param>gal.udc.fic.vvs.email.correo*</param>
+		        </targetTests>
+		        <avoidCallsTo>
+		            <avoidCallsTo>etm.core.configuration.EtmManager</avoidCallsTo>
+		            <avoidCallsTo>etm.core.monitor.EtmMonitor</avoidCallsTo>
+		            <avoidCallsTo>etm.core.monitor.EtmPoint</avoidCallsTo>
+		        </avoidCallsTo>
+		    </configuration>
+		</plugin>
+		
       </plugins>
     </pluginManagement>
   </build>
